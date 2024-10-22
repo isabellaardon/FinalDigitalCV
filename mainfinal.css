@@ -1,0 +1,292 @@
+/* Border-box in all elements*/
+*{
+    box-sizing: border-box;
+}
+/*Add margin, padding and border to the body*/
+
+/* Styling for entire document*/
+body{
+    font-family: "Teko", sans-serif; /*Modern Google Font with sans-serif as backup font*/
+    font-size: 18px; /*base font size*/
+    color: rgb(76, 42, 23); /*brown color for text*/
+    background-color: rgb(218, 210, 185); /*Creme background color*/
+    line-height: 2; /*increase line height better 
+    readability*/
+    margin: 2rem;
+    padding: 2rem;
+    border: 2px solid rgb(79, 44, 44);
+}    
+/*styling for main heading*/
+h1{
+    font-family: "Archivo Black", sans-serif; /*Different font for name*/
+    text-shadow: 1px 1px  2px rgb(79, 44, 44); /*Text shadow to outline name*/
+    font-size: 2.5rem; /*larger font for Name*/
+    text-align: center; /* Align name in center of page*/
+    color: rgb(249, 249, 248); /*Heading colors to white*/
+    
+} 
+h1{
+    font-size: 2.5rem;
+    transition: font-size 1s;
+}
+/* Make name grow bigger when hovering over*/
+h1:hover
+{
+    font-size: 4rem;
+}
+
+/*Styling for sub-heading*/
+h2{
+    font-size: 2.2rem; /*set font size for sub-headings*/
+    font-weight: 600;  /*Bolder to stand out*/
+    text-transform: uppercase; /* Convert text to uppercase*/
+    text-shadow: 1px 1px  2px rgb(79, 44, 44); /*Text shadow to outline name*/
+    color: rgb(249, 249, 248); /*Color same as Main heading*/
+    text-align: center;
+}
+h2{
+    font-size: 2.2rem;
+    transition: font-size 1s, color 2s;
+    color: rgb(249, 249, 248);
+}
+/* Make titles grow bigger and change color when hovering over*/
+h2:hover
+{
+    font-size: 3rem;
+    color: rgb(162, 143, 112);
+    text-shadow: 1px 1px  2px rgb(251, 249, 249);
+}
+/*Styling for sub-sub-heading*/
+h3{
+    font-size: 1.5rem; /*Font size between h2 and p to differentiation*/
+}
+/* Add padding below headers to provide spacing and prevent cramping*/
+h1,h2,h3
+{
+    padding-bottom: 1rem;
+}
+/*Styling for paragraphs*/
+p{
+    font-size: 1.2rem ; /*Set font size for paragraphs*/
+}
+/* Styling for hyperlinks*/
+a{
+    text-decoration: none; /*Remove  underline in links*/
+    color:rgb(138, 108, 62) /*Slightly lighter color for links to differentiate*/
+
+}
+a{
+    font-size: 1.2rem;
+    transition: font-size 1s;
+}
+a:hover
+{
+    font-size: 2rem;
+}
+
+/* Seperate sections with margins to utilize collapsing margins. Borders space them apart*/
+
+header section 
+{
+display: flex;
+justify-content: space-between;
+height: 20rem;
+}
+main section, footer section
+{
+    margin: 4rem 0;
+    border-top: 2px solid  rgb(76, 42, 23);
+}
+/*Adjust  form elements for same look and feel*/
+form input
+form textarea
+form select
+{
+    padding: 0.1rem 0.2rem;
+    color: rgb(107, 74, 13);
+    border: 2px dotted rgb(107, 74, 13);
+    background-color: blue;
+}
+form  fieldset
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+form button
+{
+    padding: 0.5rem 1rem;
+    color: rgb(68, 40, 12)
+    ;border: 2px solid rgb(252, 252, 251);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease-in;
+    
+}
+form button:hover
+{
+color: rgb(252, 252, 251);
+background-color: rgb(68, 40, 12);
+}
+/* Remove outlines from form elements, makes a cleaner look*/
+form input,
+form textarea
+{
+outline: none;
+}
+/* HEADER- INTRODUCTION  SECTION*/
+header section .image-container
+{
+align-self: flex-start; /*Position to start of y-axis*/
+/*Makes image shape square*/
+    width: 15rem;
+    height: 15rem;
+}
+header section .image-container img 
+{
+    display: block;
+    /* Fits image in container div*/
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%; /* Rounds shape*/
+    object-fit: cover;
+    object-position:100% 20%;
+}
+header section  .name-container
+{
+    align-self: center;
+}
+header section .information-container
+{
+    align-self: flex-end;
+}
+/*====  Education SECTION======*/
+.education .container
+{
+    text-align: center;
+}
+/* === MAIN - Technologies SECTION === */
+.project-entry
+{
+  display:block;
+  flex-direction:column;
+}
+
+.technologies .container
+{
+  display: flex;
+  justify-content: space-evenly;
+}
+/* === MAIN - Tools SECTION === */
+
+.tools .container
+{
+   
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+/*=====MAIN  -Acheivements=====*/
+.Achievements .container
+{
+    text-align: center;
+}
+/* === MAIN - Projects SECTION === */
+.project-entry .image-container
+{
+  display: flex;
+  justify-content: left;
+  margin-right: 2rem;
+  border-radius: 50%;
+}
+
+.projects .message-container
+{
+  margin-top: 2rem;
+  text-align: end;
+}
+
+ /* === MAIN - Contact SECTION === */
+ /*UNFINISHED_________MOBILE FRIENDLY*/
+ section#contacttext
+ {
+    width: 90%;
+    margin: 0 auto;
+}
+@media (max-width:500px)
+{
+    section#contacttext{
+        width: 20%;
+    }
+  
+
+}
+
+ .contact .form-container
+ {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+ }
+
+ .contact .text-input-container,
+.contact .select-container,
+.contact .checkbox-container
+{
+  display: flex;
+  width: 30rem;
+  margin-bottom: 1rem;
+}
+
+.contact .text-input-container label,
+.contact .select-container label
+{
+  flex-grow: 1;
+}
+contact .text-input-container input,
+.contact .text-input-container textarea,
+.contact .select-container select
+{
+  width: 20rem;
+}
+.contact .text-input-container textarea
+{
+  height: 10rem;
+}
+
+.contact .button-container
+{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/*Styling for list items*/
+li{
+    font-size:1.2rem  ; /*Set same font size as paragraphs*/
+}
+/*Styling  for  table*/
+table{
+    font-size: 1.2rem; /*Set same font size as paragraphs*/
+}
+/*Styling for form*/
+form{
+    font-size: 1.2rem; /*set same font as paragraphs*/
+}
+/*Make Profile  picture rounded and add border*/
+.image-container img
+{
+border-radius: 50%;
+}
+.contact .button-container button[type=reset]
+{
+  margin-right: 1rem;
+}
+
+/* === HELPERS === */
+.border-dotted
+{
+  border: 2px dotted #56320c;
+}
